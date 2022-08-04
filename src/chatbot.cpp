@@ -12,7 +12,7 @@
 ChatBot::ChatBot()
 {
     // invalidate data handles
-    _image = NULL;
+    _image = NULL; // triggers bug, as the dtor only checks for NULL
     _chatLogic = nullptr;
     _rootNode = nullptr;
 }

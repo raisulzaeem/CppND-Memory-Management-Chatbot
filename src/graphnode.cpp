@@ -11,6 +11,8 @@ GraphNode::~GraphNode()
     //// STUDENT CODE
     ////
 
+     // delete _chatBot; // triggers bug due to double deallocation of the same memory. _chatbot is not an exclusive GraphNode property.
+
     ////
     //// EOF STUDENT CODE
 }
