@@ -16,14 +16,14 @@ private:
     //// STUDENT CODE
     ////
 
-    // data handles (owned)
+    // data handles (owned) // unique pointers
     std::vector<GraphNode *> _nodes;
     std::vector<GraphEdge *> _edges;
 
     ////
     //// EOF STUDENT CODE
 
-    // data handles (not owned)
+    // data handles (not owned) // shared pointers??
     GraphNode *_currentNode;
     ChatBot *_chatBot;
     ChatBotPanelDialog *_panelDialog;
