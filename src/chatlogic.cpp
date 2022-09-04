@@ -202,7 +202,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
     for (auto it = std::begin(_nodes); it != std::end(_nodes); ++it)
     {
         // search for nodes which have no incoming edges
-        if (it->GetNumberOfParents() == 0)
+        if ((*it)->GetNumberOfParents() == 0)
         {
 
             if (rootNode == nullptr)
@@ -222,7 +222,8 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
 
     ChatBot chatBot("../images/chatbot.png");
 
-    chatBot.SetChatLogicHandle(&chatBot);
+    SetChatbotHandle(&chatBot);
+    chatBot.SetChatLogicHandle(this);    
 
 
     chatBot->SetRootNode(rootNode);
